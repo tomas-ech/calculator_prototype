@@ -27,37 +27,38 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 30px #0059ff;
   background-color: #fff;
-}
-.calculator #display {
-  color: #0a1e23;
-  margin: 0 10px;
-  height: 120px;
-  width: auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: 30px;
-  margin-bottom: 20px;
-  font-weight: 800;
-}
-.calculator #equal {
-  height: 130px;
-}
-.calculator #clear {
-  background-color: #ffd0fb;
-  color: #fc3340;
-}
-.calculator .btn-number {
-  background-color: #c3eaff;
-  color: #000000;
-}
-.calculator .btn-operator {
-  background-color: #ffd0fb;
-  color: #0051ff;
-}
-.calculator .btn-equal {
-  background-color: #adf9e7;
-  color: #000;
+  #display {
+    color: #0a1e23;
+    margin: 0 10px;
+    height: 120px;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+
+  #equal {
+    height: 130px;
+  }
+  #clear {
+    background-color: #ffd0fb;
+    color: #fc3340;
+  }
+  .btn-number {
+    background-color: #c3eaff;
+    color: #000000;
+  }
+  .btn-operator {
+    background-color: #ffd0fb;
+    color: #0051ff;
+  }
+  .btn-equal {
+    background-color: #adf9e7;
+    color: #000;
+  }
 }
 
 button {
@@ -70,7 +71,7 @@ button {
   font-size: 20px;
   cursor: pointer;
   transition: all 0.2s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
-button:hover {
-  transform: scale(1.1);
-}/*# sourceMappingURL=style.css.map */
