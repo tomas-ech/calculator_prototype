@@ -1,5 +1,8 @@
+const entry_display = document.querySelector(".entry_display");
 const display = document.querySelector("#display");
+
 const buttons = document.querySelectorAll("button");
+
 
 buttons.forEach((item) => {
     item.onclick = () => {
@@ -9,7 +12,17 @@ buttons.forEach((item) => {
             let string = display.innerText.toString();
             display.innerText = string.substr(0, string.length - 1);
         } else if (display.innerText != "" && item.id == "equal") {
-            display.innerText = eval(display.innerText);
+
+            const answer = eval(display.innerText);
+
+            const newRegistry = document.createElement("li");
+
+            newRegistry.innerText = display.innerText + " = " + answer;
+
+            entry_display.append(newRegistry);
+
+            display.innerText = answer;
+
         } else if (display.innerText == "" && item.id == "equal") {
             display.innerText = "Null";
             setTimeout(() => (display.innerText = ""), 2000);

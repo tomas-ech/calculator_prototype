@@ -17,7 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  border: solid red 2px;
+  gap: 40px;
 }
 
 .calculator {
@@ -124,4 +124,19 @@ button {
 }
 button:hover {
   transform: scale(1.1);
+}
+
+.historial {
+  border: solid red 2px;
+  height: 40vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.entry_display {
+  border: solid red 2px;
+  height: 100%;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
