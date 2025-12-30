@@ -17,7 +17,24 @@ buttons.forEach((item) => {
 
             const newRegistry = document.createElement("li");
 
-            newRegistry.innerText = display.innerText + " = " + answer;
+            const text = document.createElement("p");
+            text.classList.add("answerText");
+            text.innerText = display.innerText + " = " + answer;
+
+            const dateText = document.createElement("p");
+            dateText.classList.add("dateText");
+            const today = new Date();
+            const hours = today.getHours();
+            const minutes = today.getMinutes();
+            const displayMinutes = String(minutes).padStart(2, '0');
+
+            const displayHours = hours % 12 || 12;
+            const ampm = hours >= 12 ? "pm" : "am";
+
+            dateText.innerText = `${displayHours}:${displayMinutes} ${ampm}`;
+
+            newRegistry.append(text);
+            newRegistry.append(dateText);
 
             entry_display.append(newRegistry);
 
@@ -41,3 +58,11 @@ themeToggleBtn.onclick = () => {
     themeToggleBtn.classList.toggle("active");
     isDark = !isDark;
 };
+
+const historyToggler = document.querySelector(".history-toggler");
+const historyPanel = document.querySelector(".historial");
+
+historyToggler.onclick = () => {
+    historyPanel.classList.toggle("hidden");
+    entry_display.innerHTML = "";
+}
