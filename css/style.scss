@@ -162,13 +162,14 @@ button {
 
   width: 80vw;
   max-width: 330px;
-  
+
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
   font-weight: 800;
   background-color: #fff;
+  z-index: -1;
 }
 
 .entry_display {
@@ -223,17 +224,15 @@ button {
 }
 
 .hidden {
-  opacity: 0;
   overflow: hidden;
+  opacity: 0;
   height: 0px;
+  width: 0px;
+  transform: translateX(-200px);
+  z-index: -1;
 
-  h1 {
-    transition: all 0.5s;
-    opacity: 0;
-  }
-
-  ul {
-    transition: all 0.5s;
+  h1, ul {
+    transition: all 0.5s ease;
     opacity: 0;
   }
 }
