@@ -64,5 +64,4 @@ const historyPanel = document.querySelector(".historial");
 
 historyToggler.onclick = () => {
     historyPanel.classList.toggle("hidden");
-    entry_display.innerHTML = "";
 }
