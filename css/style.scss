@@ -17,6 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  border: solid red 2px;
 }
 
 .calculator {
@@ -58,6 +59,56 @@ body {
   .btn-equal {
     background-color: #adf9e7;
     color: #000;
+  }
+
+  &.dark {
+    background-color: #1b1b1b;
+    #display {
+      color: #f8fafb;
+    }
+    #clear {
+      background-color: #4c35aa;
+      color: white;
+    }
+    .btn-number {
+      background-color: #8efda6;
+      color: black;
+      font-weight: 600;
+    }
+    .btn-operator {
+      background-color: #f0db4f;
+      color: #aa00a4;
+    }
+    .btn-equal {
+      background-color: #f23b00;
+      color: #ffffff;
+    }
+  }
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+  }
+}
+.theme-toggler.active {
+  color: #333;
+  &::before {
+    background-color: #fff;
   }
 }
 
